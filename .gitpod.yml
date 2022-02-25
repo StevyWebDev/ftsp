@@ -1,0 +1,10 @@
+image:
+  file: .gitpod.Dockerfile
+ports:
+  - port: 8000
+    onOpen: open-browser
+    visibility: public
+
+tasks:
+  - init: composer update
+    command: php -S 0.0.0.0:8000 -t public/
